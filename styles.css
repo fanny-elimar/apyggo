@@ -1,0 +1,467 @@
+:root{
+--bg: #ffffff;
+--muted: #0097b2;
+--text: #100b2d; /* ton violet sombre existant */
+--accent-start: #8c52ff; /* fournie */
+--accent-end: #00bf63; /* fournie (corrigée) */
+--accent: linear-gradient(90deg,var(--accent-start),var(--accent-end));
+--card-shadow: 0 8px 24px rgba(16,11,45,0.06);
+--radius: 14px;
+--container: 1100px;
+}
+
+
+*{box-sizing:border-box;   font-family: "Nunito", sans-serif; }
+html,body{height:100%;}
+body{
+margin:0;
+font-family: "Nunito", sans-serif;
+color:var(--text);
+background:var(--bg);
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+line-height:1.5;
+-webkit-tap-highlight-color:transparent;
+}
+
+
+a{color:inherit;text-decoration:none}
+
+
+
+
+
+/* Header */
+.top-nav{padding:0 0;position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(90deg, #8c52ff, #00bf63);z-index:60;
+max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;}
+  .top-nav-title {
+    font-size: larger;
+  }
+
+.nav{max-width: 1200px;
+  margin: 20px auto;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{height:110px;width:auto;display:block;}
+.brand .title{font-weight:700;color:var(--text)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.phone-icon {
+  color: white;
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+.top-nav p {
+    color: #fff;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: transform 0.3s ease;}
+
+  .top-nav a {
+    color: #fff;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: transform 0.3s ease;
+text-decoration: none;
+}
+
+.top-nav a:hover {
+    color: #c0c4c8;
+}
+
+.nav a{color: var(--accent-end);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+  .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+nav a:hover {
+  color: #548bc6;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:10px;border:1px solid rgba(16,11,45,0.06);background:white;cursor:pointer;font-weight:600}
+.btn-contact{text-align: center;padding:10px 16px;border-radius:10px;border:1px solid var(--muted);background:white;cursor:pointer;font-weight:600}
+.btn-contact:hover{background:var(--muted);color:white;cursor:pointer;font-weight:600}
+
+
+/* Hero */
+.hero{padding:64px 0 48px; display: flex;gap: 20px;}
+.hero h1{font-size:38px;margin:0 0 16px}
+.hero p{margin:0 0 20px;color:var(--text);max-width:56ch}
+.cta-row{display:flex;gap:12px;align-items:center}
+.cta-primary{background:var(--accent-start);background-image:var(--accent);color:white;padding:12px 18px;border:none;box-shadow:0 8px 24px rgba(140,82,255,0.12);cursor:pointer;font-weight:700}
+.cta-ghost{border:1px solid var(--accent-end);color: var(--accent-end); padding:10px 16px;background:white; text-decoration: none;}
+
+
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.9),white);padding:20px;border-radius:18px;box-shadow:var(--card-shadow);min-width:250px;margin-top: auto;}
+.meta{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.chip{font-size:13px;padding:6px 10px;border:1px dashed rgba(16,11,45,0.06)}
+@media (max-width: 980px) {
+  .hero {
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 20px;
+  }
+}
+
+/* Services */
+section{padding:56px 0}
+
+.service-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ✅ centrage plus fluide */
+  gap: 24px; /* ✅ espace régulier entre cartes */
+}
+
+/* Carte */
+.card {
+  flex: 0 1 300px; /* ✅ largeur fixe mais flexible sur petits écrans */
+  height: 300px;
+  background: #fff;
+  padding: 24px 20px;
+  box-shadow: var(--card-shadow);
+  color: var(--muted);
+  text-align: center;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column; /* ✅ structure verticale */
+  justify-content: space-between; /* ✅ garde une belle répartition du contenu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icône */
+.card i {
+  font-size: 8vh;
+  margin-bottom: 10px;
+}
+
+/* Titre */
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+/* Texte */
+.card p {
+  margin: 0;
+  color: var(--text);
+  flex-grow: 1; /* ✅ équilibre les hauteurs selon la longueur du texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* projets */
+.card-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid rgba(16, 11, 45, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0 0 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  width: 280px; /* ✅ rend la carte plus étroite (ajuste selon ton design) */
+  margin:1rem;
+  overflow: hidden;
+}
+
+/* Image */
+.card-project img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(16, 11, 45, 0.06);
+  display: block;
+}
+
+/* Contenu */
+.card-project h3 {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 14px 0 6px;
+  padding: 0 1rem;
+}
+
+.card-project p {
+  color: #555;
+  font-size: 0.95rem;
+  padding: 0 1rem;
+  margin-bottom: 1px; /* ✅ réduit l’espace sous le texte */
+  flex-grow: 0.5;
+}
+
+.card-project a {
+    text-decoration: none;
+}
+
+/* Bouton */
+.card-project .cta-primary {
+  align-self: center;
+  margin-top: 0; /* ✅ supprime l’espace supplémentaire au-dessus */
+  margin-bottom: 12px; /* un petit espace en bas pour respirer */
+  background: linear-gradient(90deg, #8c52ff, #00bf63);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.cta-primary.invisible {
+    background:none;
+}
+
+.card-project .cta-primary:hover {
+  opacity: 0.9;
+}
+
+.card-project:hover {
+  transform:  scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+blockquote{margin:0;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(240,246,255,0.7),white)}
+/* Contact */
+.contact{display:flex;}
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea,select{padding:12px;border-radius:10px;border:1px solid var(--muted);font-size:15px}
+textarea{min-height:140px}
+
+#contact {
+    padding:0 0;
+max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  display: flex;
+    justify-content: center;
+ }
+
+ #contact .container {
+  display: flex;
+  flex-wrap: wrap; /* ✅ pour gérer le responsive */
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+ .contact-form-container {
+flex: 1;
+ }
+
+ .contact-card {background:linear-gradient(90deg, #8c52ff, #00bf63);
+    padding: auto;
+max-width: 320px;
+  margin: 0 auto;
+
+  color: white;
+
+  text-align: center;
+ }
+
+ .coordonnees {
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+ }
+
+ .contact-card a {
+    color: inherit;
+    text-decoration: none;
+ }
+
+ .contact-form {
+    background-color: #fff;
+    padding: 10px;
+    border: #0097b2;
+    border-radius: 10px;
+}
+
+
+
+.footer{padding:24px 0;color:var(--accent-end);border-top:1px solid rgba(16,11,45,0.04);display: flex; justify-content: center;flex-wrap: wrap;}
+
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #8c52ff, #00bf63);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Affichage du bouton */
+#backToTop.show {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+/* Effet au hover */
+#backToTop:hover {
+  transform: translateY(-4px) scale(1.1);
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .card-project {
+    width: 100%;
+  }
+
+  .card-project img {
+    height: 200px;
+  }
+  .top-nav {
+    width: 100%;
+}
+}
+
+
+@media (max-width:640px){
+
+header .nav {
+    text-align: center;
+}
+.top-nav {
+    width: 100%;
+}
+}
+
+@media (max-width: 1200px) {
+  .top-nav {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0; /* optionnel, si tu veux qu’elle colle bien aux bords */
+  }
+}
+
+@media (max-width: 800px) {
+  .top-nav-title {
+    display: none;
+  }
+}
+
+/* Quand l'écran fait moins de 500px, on masque entièrement la barre du haut */
+@media (max-width: 500px) {
+  .top-nav {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px; /* marge latérale homogène sur tous les écrans < 1200px */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Container du header */
+  header .container.nav {
+    flex-direction: column;      /* empile logo et nav */
+    align-items: center;         /* centre horizontalement */
+    gap: 16px;                   /* espace entre logo et nav */
+    padding: 0 12px;
+  }
+
+  /* Logo centré */
+  .brand {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Nav centré */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    justify-content: center;     /* centre les liens */
+    flex-wrap: wrap;             /* wrap si trop long */
+    gap: 12px;                   /* espace entre liens */
+  }
+
+  nav li {
+    margin: 0;
+  }
+}
+
+
+
+
+/* small animations */
+.reveal{opacity:0;transform:translateY(10px);transition:all 700ms cubic-bezier(.16,.84,.24,1)}
+.reveal.active{opacity:1}
+
+
+/* utility */
+.muted{color:var(--muted)}
+.mb-16{margin-bottom:16px}
