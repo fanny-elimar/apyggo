@@ -184,12 +184,36 @@
       <div class="contact-form-container">
         <h2 class="reveal">Un projet ? Contactez-moi</h2>
 
-        <form id="contactForm" class="reveal contact-form" action="https://formsubmit.co/3fa134fcbb87dc10301cbcd8e6953975" method="POST">
-          <input type="text" name="name" placeholder="Ton nom" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Décrivez votre projet..." required></textarea>
-          <button type="submit" class="btn-contact">Envoyer la demande</button>
-        </form>
+<form id="contactForm" class="reveal contact-form" action="https://formsubmit.co/3fa134fcbb87dc10301cbcd8e6953975" method="POST">
+  
+  <!-- Nom -->
+  <input type="text" name="name" placeholder="Ton nom" required />
+
+  <!-- Email -->
+  <input type="email" name="email" placeholder="Email" required />
+
+  <!-- Message -->
+  <textarea name="message" placeholder="Décrivez votre projet..." required></textarea>
+
+  <!-- Honeypot pour anti-spam -->
+  <input type="text" name="_honey" style="display:none" />
+
+  <!-- Langue en français -->
+  <input type="hidden" name="_language" value="fr">
+
+  <!-- Sujet du mail -->
+  <input type="hidden" name="_subject" value="Nouveau message depuis le site">
+
+  <!-- Template tableau -->
+  <input type="hidden" name="_template" value="table">
+
+  <button type="submit" class="btn-contact">Envoyer la demande</button>
+</form>
+
+<!-- Message de confirmation -->
+<div id="confirmationMessage" style="display:none; margin-top: 16px; color: green; font-weight: 600;">
+  Merci ! Votre message a bien été envoyé.
+</div>
       </div>
 
       <aside class="hero-card reveal contact-card">
