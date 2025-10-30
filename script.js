@@ -45,24 +45,3 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // empêche le rechargement de la page
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    }).then(response => {
-        if (response.ok) {
-           // form.style.display = "none"; // cache le formulaire
-            document.getElementById("confirmationMessage").style.display = "block"; // affiche le message
-        } else {
-            alert("Oups ! Une erreur est survenue, réessayez plus tard.");
-        }
-    }).catch(error => {
-        alert("Oups ! Une erreur est survenue, réessayez plus tard.");
-    });
-});
