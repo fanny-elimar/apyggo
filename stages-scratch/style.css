@@ -315,6 +315,10 @@ justify-content: center;
     height: 200px;
 }
 
+.img {
+    height:200px ;
+}
+
 .image-legend {
     flex: 1;
     height: 250px;
@@ -439,7 +443,9 @@ footer .legal {
     flex-direction: column;
     gap:20px;
 }
-
+.img {
+    height:150px ;
+}
 
 }
 
