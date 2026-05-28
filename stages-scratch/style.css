@@ -195,8 +195,13 @@ justify-content: center;
     display: flex;
     max-width: 1200px;
     background: none;
-    flex-direction: row;
+    flex-direction: column;
     color: #fea807;
+}
+
+.sessions {
+    display: flex;
+    flex-direction: row;
 }
 
 .box.session {
@@ -299,21 +304,11 @@ justify-content: center;
     color: #fea807;
 }
 /* IMAGES */
-.images {
+.images, .images-projet {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-}
-
-.image-placeholder {
-    flex: 1;
-    height: 200px;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    border-radius: 10px;
+    flex-wrap: wrap;
 }
 
 .image-legend {
@@ -328,6 +323,16 @@ justify-content: center;
     display: flex;
     padding-top: 20px;
     flex-direction: column;
+}
+.image-placeholder {
+    flex: 1;
+    height: 200px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 10px;
 }
 
 
@@ -426,6 +431,15 @@ footer .legal {
     .hero .col_1 {
         text-align: center;
     }
+
+.sessions {
+    flex-direction: column;
+    gap:20px;
 }
+
+
+}
+
+
 
 
