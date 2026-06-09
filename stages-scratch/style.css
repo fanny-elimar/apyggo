@@ -368,7 +368,10 @@ button {
     cursor: pointer;
 }
 
-
+footer a {
+    text-decoration: none;
+    color: #fea807;;
+}
 
 footer {
     background: white;
