@@ -452,6 +452,63 @@ footer .legal {
 
 }
 
+/* small animations */
+.reveal{opacity:0;transform:translateY(10px);transition:all 700ms cubic-bezier(.16,.84,.24,1)}
+.reveal.active{opacity:1}
 
 
 
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #fea807, #fea807);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Affichage du bouton */
+#backToTop.show {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+/* Effet au hover */
+#backToTop:hover {
+  transform: translateY(-4px) scale(1.1);
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.logo-planyggo img {height:30px;width:auto;display:flex;}
+
+.header-top {
+    display: flex;
+}
+
+
+
+header .titre {
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        display: block;
+
+    }
+}
