@@ -512,3 +512,15 @@ header .titre {
 
     }
 }
+
+.video-demo {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.video-demo video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
