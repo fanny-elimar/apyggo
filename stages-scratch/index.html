@@ -200,14 +200,29 @@
 
 <section class="pictures">
     <h2><i class="fa-solid fa-images"></i> Le stage en images</h2>
+
     <div class="images">
-        <div class="image-placeholder">Photo à venir</div>
-        <div class="image-placeholder">Photo à venir</div>
+        <img class="photo_stage" src="photos_stage/1000045541_ok.jpg" alt="Photo de mon stage">
+        <img class="photo_stage" src="photos_stage/1000045542_flou.jpg" alt="Photo de mon stage">
+
+        <div id="more-images">
+            <img class="photo_stage" src="photos_stage/1000045717_ok.jpg" alt="Photo de mon stage">
+            <img class="photo_stage" src="photos_stage/1000045718_ok.jpg" alt="Photo de mon stage">
+            <img class="photo_stage" src="photos_stage/1000045539_flou.jpg" alt="Photo de mon stage">
+        </div>
     </div>
+
+    <button id="btn-images" onclick="toggleImages()">
+        Voir +
+    </button>
 </section>
 
 <section class="pictures">
-    <h2><i class="fa-solid fa-gamepad"></i> Exemple de projet réalisé pendant le stage</h2>
+    <h2>
+        <i class="fa-solid fa-gamepad"></i>
+        Exemple de projet réalisé pendant le stage
+    </h2>
+
     <div class="video-demo">
         <video autoplay muted loop playsinline preload="metadata">
             <source src="video_jeu.mp4" type="video/mp4">
@@ -215,20 +230,71 @@
         </video>
         <p>Vidéo d'un jeu créé avec Scratch</p>
     </div>
+
     <div class="images-projet">
+
+        <!-- Photos visibles au départ -->
         <div class="image-legend">
-            <div class="image-placeholder projet "><img src="image_jeu_scratch.png" height="200px" /></div>
+            <div class="image-placeholder projet">
+                <img src="image_jeu_scratch.png" alt="Jeu créé avec Scratch">
+            </div>
             <p>Exemple de réalisation</p>
         </div>
+
         <div class="image-legend">
-            <div class="image-placeholder projet"><img src="image_code_scratch.png" height="200px"  /></div>
+            <div class="image-placeholder projet">
+                <img src="image_code_scratch.png" alt="Code d'un jeu Scratch">
+            </div>
             <p>Exemple de code</p>
         </div>
+
         <div class="image-legend">
-            <div class="image-placeholder projet"><img class="img" src="image_fenetre_scratch.png"  /></div>
+            <div class="image-placeholder projet">
+                <img src="image_fenetre_scratch.png" alt="Projet réalisé avec Scratch">
+            </div>
             <p>Exemple de projet</p>
         </div>
+
+
+        <!-- Photos supplémentaires -->
+        <div id="more-project-images">
+
+            <div class="image-legend">
+                <div class="image-placeholder projet">
+                    <img src="photos_jeu/jeu_1.png" alt="Jeu créé par un élève">
+                </div>
+                <p>Jeu réalisé pendant le stage</p>
+            </div>
+
+            <div class="image-legend">
+                <div class="image-placeholder projet">
+                    <img src="photos_jeu/jeu_2.png" alt="Jeu créé par un élève">
+                </div>
+                <p>Jeu réalisé pendant le stage</p>
+            </div>
+
+            <div class="image-legend">
+                <div class="image-placeholder projet">
+                    <img src="photos_jeu/jeu_3.png" alt="Jeu créé par un élève">
+                </div>
+                <p>Jeu réalisé pendant le stage</p>
+            </div>
+
+            <div class="image-legend">
+                <div class="image-placeholder projet">
+                    <img src="photos_jeu/jeu_4.png" alt="Jeu créé par un élève">
+                </div>
+                <p>Jeu réalisé pendant le stage</p>
+            </div>
+
+        </div>
+
     </div>
+
+    <button id="btn-project-images" onclick="toggleProjectImages()">
+        Voir +
+    </button>
+
 </section>
 
 <section class="contact">

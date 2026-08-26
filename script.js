@@ -45,3 +45,28 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+function toggleImages() {
+    const moreImages = document.getElementById("more-images");
+    const button = document.getElementById("btn-images");
+
+    if (moreImages.classList.contains("show")) {
+        moreImages.classList.remove("show");
+        button.textContent = "Voir +";
+    } else {
+        moreImages.classList.add("show");
+        button.textContent = "Voir moins";
+    }
+}
+
+function toggleProjectImages() {
+    const moreImages = document.getElementById("more-project-images");
+    const button = document.getElementById("btn-project-images");
+
+    if (moreImages.classList.contains("show")) {
+        moreImages.classList.remove("show");
+        button.textContent = "Voir +";
+    } else {
+        moreImages.classList.add("show");
+        button.textContent = "Voir moins";
+    }
+}
