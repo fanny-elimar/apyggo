@@ -199,23 +199,205 @@ section {
     transform: none;
 }
 
-.box.semaine {
+/* ================================================= */
+/* ==================== PLANNING =================== */
+/* ================================================= */
+
+.planning {
+    color: #fea807;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.planning > h2 {
+    text-align: center;
+    font-family: 'handlee', sans-serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.planning > h2 i {
+    margin-right: 8px;
+}
+
+
+/* Titre "Stages débutants" */
+
+.debutants > h3 {
+    text-align: center;
+    font-family: 'handlee', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0 25px;
+}
+
+
+/* ================================================= */
+/* ==================== SEMAINE ==================== */
+/* ================================================= */
+
+.semaine {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #fff8d6;
+
+    border-radius: 18px;
+
+    padding: 20px;
+    margin: 0 auto 25px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+   /* border-left: 6px solid #fea807;*/
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.semaine:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================================================= */
+/* ================= TITRE SEMAINE ================= */
+/* ================================================= */
+
+.semaine-titre {
     display: flex;
-    max-width: 1200px;
-    background: none;
-    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+
     color: #fea807;
 }
 
-.sessions {
+.semaine-titre > i {
+    font-size: 1.8em;
+
+    background: #fea807;
+    color: white;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.box.session {
-    background: none;
-    background-color: #fea807;
+.semaine-titre div {
+    display: flex;
+    flex-direction: column;
+}
+
+.semaine-titre span {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.semaine-titre strong {
+    font-size: 1.4em;
+}
+
+
+/* ================================================= */
+/* ==================== SESSIONS =================== */
+/* ================================================= */
+
+.sessions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Carte d'une session */
+
+.session {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s ease;
+}
+
+.session:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================================================= */
+/* ================ TITRE SESSION ================== */
+/* ================================================= */
+
+.session-titre {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    color: #fea807;
+
+    font-size: 1.1em;
+}
+
+.session-titre i {
+    background: #ffde59;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fea807;
+}
+
+
+/* Informations */
+
+.session p {
+    color: #444;
+
+    margin: 8px 0 15px;
+
+    line-height: 1.5;
+}
+
+
+/* Horaire */
+
+.horaire {
+    display: inline-block;
+
+    background: #fea807;
     color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    font-size: 0.95em;
 }
 
 
@@ -329,8 +511,7 @@ section {
 /* ==================== PICTURES =================== */
 /* ================================================= */
 
-.pictures,
-.planning {
+.pictures {
     color: #fea807;
 }
 
@@ -694,9 +875,21 @@ footer .legal {
         text-align: center;
     }
 
-    .sessions {
-        flex-direction: column;
-        gap: 20px;
+.sessions {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .semaine {
+        padding: 15px;
+    }
+
+    .semaine-titre strong {
+        font-size: 1.2em;
+    }
+
+    .session {
+        padding: 15px;
     }
 
 
