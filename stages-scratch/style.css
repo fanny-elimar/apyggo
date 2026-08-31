@@ -594,6 +594,10 @@ section {
 /* ============== PROJETS / JEUX SCRATCH =========== */
 /* ================================================= */
 
+
+
+
+
 /*
    Cette partie est indépendante de la galerie du stage.
 */
@@ -1008,18 +1012,37 @@ header .titre {
 /* ======================= VIDEO =================== */
 /* ================================================= */
 
-.video-demo {
+.projets_realises {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.game_to_play {
+    width: 100%;
     max-width: 500px;
-
-    margin: 0 auto 2rem;
-
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
     text-align: center;
 }
 
-.video-demo video {
+.game_to_play iframe {
+    display: block;
     width: 100%;
+    aspect-ratio: 5 / 4;
+    height: auto;
+    border: none;
+}
 
-    border-radius: 12px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+.game_to_play p {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    text-align: center;
 }
